@@ -31,15 +31,14 @@
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
-
 // -----------------------------------------------------------------------------------------
 // |  TAB |  F1 |  F2 |  F3 |  F4 |BTCLR|   |     |     |     |     |     | BSPC |
 // |  CAPS|  F5 |  F6 |  F7 |  F8 | BT1 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |  F9 |  F10|  F11|  F12| BT2 |   |     |     |     |     |     |      |
 //                    | GUI |     | BSPC|   | SPC |     | ALT |
                         bindings = <
-   &kp TAB    &kp F1 &kp F2  &kp F3  &kp F4  &trans         &trans   &trans   &trans &trans    &trans &kp BSPC
-   &bt CAPS   &kp F5 &kp F6  &kp F7  &kp F8  &bt BT_SEL 1   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp TAB    &kp F1 &kp F2  &kp F3  &kp F4  &bt BT_CLR     &trans   &trans   &trans &trans    &trans &kp BSPC
+   &kp CAPS   &kp F5 &kp F6  &kp F7  &kp F8  &bt BT_SEL 1   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LSHFT  &kp F9 &kp F10 &kp F11 &kp F12 &bt BT_SEL 2   &trans   &trans   &trans &trans    &trans &trans
                           &kp LGUI  &trans  &kp BSPC           &kp SPC  &trans   &kp RALT
                         >;
@@ -49,6 +48,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+
+// -----------------------------------------------------------------------------------------
+// |  INS |  &  |  ^  |  {  |  }  |  `  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+// | CTRL |  @  |  #  |  (  |  )  |  !  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
