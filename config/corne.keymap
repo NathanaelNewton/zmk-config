@@ -8,6 +8,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+
+
+rpi: require_prior_idle {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+    bindings = <&kp>, <&kp>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -19,9 +31,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR |BSPC |   | SPC | RSE  | ALT |
                         bindings = <
-   &kp UNDER   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp SQT
-   &kp TAB &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G   &kp H &mt LSHFT J  &mt LCTRL K &mt LALT L &mt LGUI SEMI &kp RET
-   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+   &kp UNDER &kp Q      &kp W      &kp E       &kp R       &kp T   &kp Y &kp U        &kp I       &kp O      &kp P         &kp SQT
+   &kp TAB   &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G   &kp H &mt LSHFT J  &mt LCTRL K &mt LALT L &mt LGUI SEMI &kp RET
+   &sk LSHFT &kp Z      &kp X      &kp C       &kp V       &kp B   &kp N &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp ESC
                   &kp LGUI &sl 1 &kp BSPC    &kp SPACE &sl 2 &kp RALT
                         >;
                 };
