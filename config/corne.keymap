@@ -79,6 +79,7 @@
    &kp RET &kp LSHFT &kp Z &kp X &kp C &kp V   &kp B &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
                   &kp LGUI &mt 4 &kp SPACE     &kp GRAVE   &to 0  &kp RALT
                         >;
+                };
                 cool_extra_layer {  // 4
 // ---------------not correct---------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  '   |
