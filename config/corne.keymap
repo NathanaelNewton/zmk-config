@@ -24,7 +24,7 @@
            compatible = "zmk,behavior-tap-dance";
            #binding-cells = <0>;
            tapping-term-ms = <200>;
-           bindings = <&none>, <&sl 5>;
+           bindings = <&none>, <&sl 6>;
        };
     };
     keymap {
@@ -120,6 +120,7 @@
                 >;
         };
         bluetooth_layer {
+            // 6
             bindings = <
                 &none &none &none &none &none &bt BT_CLR     &none &none &none &none &none &none
                 &none &none &none &none &none &bt BT_SEL 0   &none &none &none &none &none &none
