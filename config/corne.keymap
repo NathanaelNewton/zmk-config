@@ -28,6 +28,9 @@
            bindings = <&none>, <&sl 6>;
        };
     };
+    combos {
+        compatible = "zmk,combos";
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -124,7 +127,7 @@
             // 6
             bindings = <
                 &none &none &none &none &none      &bt BT_CLR     &none &none &none &none &none &none
-                &none &none &none &none &bt BT_PVR &bt BT_SEL 0   &none &none &none &none &none &none
+                &none &none &none &none &bt BT_PRV &bt BT_SEL 0   &none &none &none &none &none &none
                 &none &none &none &none &bt BT_NXT &bt BT_SEL 1   &none &none &none &none &none &none
                                   &none &none      &none          &none &none &none
                 >;
