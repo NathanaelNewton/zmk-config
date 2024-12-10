@@ -59,6 +59,12 @@
             layers = <8>;
             bindings = <&kp N>;
         };
+        combo_d {
+            timeout-ms = <50>;
+            key-positions = <7 8 9>;
+            layers = <8>;
+            bindings = <&kp B>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -84,10 +90,10 @@
             // | SHFT |  F9 |  F10|  F11|  F12| BT2 |   | END | VDN | VUP | PGDN|     |      |
             //                    | GUI |     | BSPC|   | SPC |     | ALT |
             bindings = <
-                &to 3      &kp F1 &kp F2  &kp F3  &kp F4  &bt BT_CLR     &kp HOME &kp C_BRI_DN &kp C_BRI_UP &kp PG_UP &trans &trans
-                &to 5      &kp F5 &kp F6  &kp F7  &kp F8  &bt BT_SEL 0   &kp LEFT &kp DOWN     &kp UP       &kp RIGHT &trans &trans
-                &kp LSHFT  &kp F9 &kp F10 &kp F11 &kp F12 &bt BT_SEL 1   &kp END  &kp C_VOL_DN &kp C_VOL_UP &kp PG_DN &trans &trans
-                &kp LGUI  &trans  &kp BSPC           &kp SPC  &trans   &kp RALT
+                &to 3 &kp F1 &kp F2  &kp F3  &kp F4  &bt BT_CLR     &kp HOME &kp C_BRI_DN &kp C_BRI_UP &kp PG_UP &trans &trans
+                &to 5 &kp F5 &kp F6  &kp F7  &kp F8  &bt BT_SEL 0   &kp LEFT &kp DOWN     &kp UP       &kp RIGHT &trans &trans
+                &to 8 &kp F9 &kp F10 &kp F11 &kp F12 &bt BT_SEL 1   &kp END  &kp C_VOL_DN &kp C_VOL_UP &kp PG_DN &trans &trans
+                                    &kp LGUI  &trans &kp BSPC       &kp SPC  &trans       &kp RALT
                 >;
         };
         raise_layer {
