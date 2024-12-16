@@ -141,26 +141,8 @@
         artseyio_layer {
             // 8
             bindings = <
-                &none &none &none &none &none &none      &none &lt 9 A &kp R &kp T &lt 10 S &none 
-                &none &none &none &none &none &none      &none &kp E   &kp Y &kp I &kp O    &none 
-                &none &none &none &none &none &none      &none &none   &none &none &none    &none 
-                                  &none &none &none      &none &to 0 &none
-            >;
-        };
-        artseyio_numbers_layer {
-            // 9
-            bindings = <
-                &none &none &none &none &none &none      &none &kp N1 &kp N2 &kp N3 &none &none 
-                &none &none &none &none &none &none      &none &kp N4 &kp N5 &kp N6 &none &none 
-                &none &none &none &none &none &none      &none &none  &none  &none  &none &none 
-                                  &none &none &none      &none &to 0 &none
-            >;
-        };
-        artseyio_brackets_layer {
-            // 10
-            bindings = <
-                &none &none &none &none &none &none      &none &none &kp LPAR &kp LBKT &kp LBRC &none 
-                &none &none &none &none &none &none      &none &none &kp RPAR &kp RBKT &kp RBRC &none 
+                &none &none &none &none &none &none      &none &kp A &kp R &kp T &kp S &none 
+                &none &none &none &none &none &none      &none &kp E &kp Y &kp I &kp O &none 
                 &none &none &none &none &none &none      &none &none &none &none &none &none 
                                   &none &none &none      &none &to 0 &none
             >;
@@ -362,12 +344,6 @@
         combo_shift {
             timeout-ms = <50>;
             key-positions = <7 20 21 22>;
-            layers = <8>;
-            bindings = <&sk LSHFT>;
-        };
-        combo_shift2 {
-            timeout-ms = <50>;
-            key-positions = <9 22>;
             layers = <8>;
             bindings = <&sk LSHFT>;
         };
