@@ -52,9 +52,9 @@
             // | SHFT |  F9 |  F10|  F11|  F12| BT2 |   | END | VDN | VUP | PGDN|     |      |
             //                    | GUI |     | BSPC|   | SPC |     | ALT |
             bindings = <
-                &to 3 &kp F1 &kp F2  &kp F3  &kp F4  &trans        &kp HOME &kp C_BRI_DN &kp C_BRI_UP &kp PG_UP &trans  &trans
-                &to 5 &kp F5 &kp F6  &kp F7  &kp F8  &trans        &kp LEFT &kp DOWN     &kp UP       &kp RIGHT &kp DEL &kp INS
-                &to 8 &kp F9 &kp F10 &kp F11 &kp F12 &trans        &kp END  &kp C_VOL_DN &kp C_VOL_UP &kp PG_DN &trans  &trans
+                &to 3 &kp F1 &kp F2  &kp F3  &kp F4  &bt BT_CLR     &kp HOME &kp C_BRI_DN &kp C_BRI_UP &kp PG_UP &trans  &trans
+                &to 5 &kp F5 &kp F6  &kp F7  &kp F8  &bt BT_SEL 0   &kp LEFT &kp DOWN     &kp UP       &kp RIGHT &kp DEL &kp INS
+                &to 8 &kp F9 &kp F10 &kp F11 &kp F12 &bt BT_SEL 1   &kp END  &kp C_VOL_DN &kp C_VOL_UP &kp PG_DN &trans  &trans
                                     &kp LGUI  &trans &kp BSPC       &kp SPC  &trans       &kp RALT
                 >;
         };
@@ -72,7 +72,7 @@
             // | SHFT |  $  |  %  |  [  |  ]  |  ~  |   |  .  |  7  |  8  |  9  |  +  |  |   |
             //                    | GUI |     | BSPC|   | SPC |     | ALT |
             bindings = <
-                &kp CAPS  &kp AMPS &kp CARET &kp LBRC &kp RBRC &kp GRAVE   &kp FSLH  &kp N1    &kp N2    &kp N3   &kp ASTRK &kp BSLH
+                &kp  INS  &kp AMPS &kp CARET &kp LBRC &kp RBRC &kp GRAVE   &kp FSLH  &kp N1    &kp N2    &kp N3   &kp ASTRK &kp BSLH
                 &kp PSCRN &kp AT   &kp HASH  &kp LPAR &kp RPAR &kp EXCL    &kp N0    &kp N4    &kp N5    &kp N6   &kp MINUS &kp EQUAL
                 &to 11    &kp DLLR &kp PRCNT &kp LBKT &kp RBKT &kp TILDE   &kp DOT   &kp N7    &kp N8    &kp N9   &kp PLUS  &kp PIPE
                                         &kp LGUI &trans   &kp BSPC         &kp SPC   &trans    &kp RALT
@@ -89,7 +89,7 @@
                 &kp ESC  &kp LALT  &kp Q &kp W &kp E &kp R   &kp T &kp Y  &kp U &kp I     &kp O    &kp P
                 &kp TAB  &kp LCTRL &kp A &kp S &kp D &kp F   &kp G &kp H  &kp J &kp K     &kp L    &kp SEMI
                 &kp RET  &kp LSHFT &kp Z &kp X &kp C &kp V   &kp B &kp N  &kp M &kp COMMA &kp DOT  &kp FSLH
-                                 &kp LGUI &sl 4 &kp SPACE     &kp SPACE &to 0 &kp RALT
+                &kp LGUI &sl 4 &kp SPACE     &kp SPACE &to 0 &kp RALT
                 >;
         };
         cool_extra_layer {
@@ -103,7 +103,7 @@
                 &kp ESC  &kp LALT  &kp N1 &kp N2 &kp N3 &kp T   &kp T &kp Y  &kp U &kp I     &kp O    &kp P
                 &kp TAB  &kp GRAVE &kp N4 &kp N5 &kp N6 &kp G   &kp G &kp H  &kp J &kp K     &kp L    &kp SEMI
                 &kp RET  &kp LSHFT &kp N7 &kp N8 &kp N9 &kp B   &kp B &kp N  &kp M &kp COMMA &kp DOT  &kp FSLH
-                                 &kp LGUI &kp SPACE &kp SPACE   &kp SPACE &to 0 &kp RALT
+                &kp LGUI &kp SPACE &kp SPACE   &kp SPACE &to 0 &kp RALT
                 >;
         };
         colemak_layer {
@@ -117,7 +117,7 @@
                 &kp UNDER &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U       &kp Y   &kp SEMI &kp SQT
                 &kp TAB   &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E       &kp I   &kp O    &kp RET
                 &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA   &kp DOT &kp FSLH &kp ESC
-                             &kp LGUI &sl 1    &kp BSPC   &kp SPACE &sl 2 &to 0
+                &kp LGUI &sl 1    &kp BSPC   &kp SPACE &sl 2 &to 0
                 >;
         };
         bluetooth_layer {
