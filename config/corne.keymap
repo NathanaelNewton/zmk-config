@@ -86,7 +86,7 @@
                 &none &none &none &none &none      &none   &none &none &none &none &none &none
                                   &none &none      &none          &none &none &none
             >;
-        }
+        };
         cool_layer {
             // 4
             // -----------------------------------------------------------------------------------------
