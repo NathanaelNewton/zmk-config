@@ -25,7 +25,7 @@
            compatible = "zmk,behavior-tap-dance";
            #binding-cells = <0>;
            tapping-term-ms = <200>;
-           bindings = <&none>, <&sl 6>;
+           bindings = <&to 3>, <&sl 6>;
        };
     };
     keymap {
@@ -41,7 +41,7 @@
                 &kp ESC   &kp Q      &kp W      &kp E       &kp R       &kp T   &kp Y &kp U        &kp I       &kp O      &kp P         &kp SQT
                 &kp TAB   &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G   &kp H &mt LSHFT J  &mt LCTRL K &mt LALT L &mt LGUI SEMI &kp RET
                 &bt_td    &kp Z      &kp X      &kp C       &kp V       &kp B   &kp N &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp UNDER
-                                                    &sk LSHFT &sl 1 &kp BSPC    &kp SPACE &sl 2 &mo 7
+                                                    &sk LSHFT &sl 1 &kp BSPC    &kp SPACE &sl 2 &mo 8
                 >;
         };
         lower_layer {
@@ -52,9 +52,9 @@
             // | SHFT |  F9 |  F10|  F11|  F12| BT2 |   | END | VDN | VUP | PGDN|     |      |
             //                    | GUI |     | BSPC|   | SPC |     | ALT |
             bindings = <
-                &to 3 &kp F1 &kp F2  &kp F3  &kp F4  &trans        &kp HOME &kp C_BRI_DN &kp C_BRI_UP &kp PG_UP &trans  &trans
-                &to 5 &kp F5 &kp F6  &kp F7  &kp F8  &kp CAPS      &kp LEFT &kp DOWN     &kp UP       &kp RIGHT &kp DEL &kp INS
-                &to 8 &kp F9 &kp F10 &kp F11 &kp F12 &trans        &kp END  &kp C_VOL_DN &kp C_VOL_UP &kp PG_DN &trans  &trans
+                &trans &kp F1 &kp F2  &kp F3  &kp F4  &trans        &kp HOME &kp C_BRI_DN &kp C_BRI_UP &kp PG_UP &trans  &trans
+                &trans &kp F5 &kp F6  &kp F7  &kp F8  &kp CAPS      &kp LEFT &kp DOWN     &kp UP       &kp RIGHT &kp DEL &kp INS
+                &trans &kp F9 &kp F10 &kp F11 &kp F12 &trans        &kp END  &kp C_VOL_DN &kp C_VOL_UP &kp PG_DN &trans  &trans
                                     &kp LGUI &trans  &kp BSPC      &kp SPC  &trans       &kp RALT
                 >;
         };
@@ -74,12 +74,21 @@
             bindings = <
                 &none     &kp AMPS &kp CARET &kp LBRC &kp RBRC &kp GRAVE   &kp FSLH  &kp N1    &kp N2    &kp N3   &kp ASTRK &kp BSLH
                 &kp PSCRN &kp AT   &kp HASH  &kp LPAR &kp RPAR &kp EXCL    &kp N0    &kp N4    &kp N5    &kp N6   &kp MINUS &kp EQUAL
-                &to 11    &kp DLLR &kp PRCNT &kp LBKT &kp RBKT &kp TILDE   &kp DOT   &kp N7    &kp N8    &kp N9   &kp PLUS  &kp PIPE
+                &trans    &kp DLLR &kp PRCNT &kp LBKT &kp RBKT &kp TILDE   &kp DOT   &kp N7    &kp N8    &kp N9   &kp PLUS  &kp PIPE
                                        &kp LGUI &kp SPACE &kp BSPC         &kp SPC   &trans    &kp RALT
                 >;
         };
+        // 3
+        layer_select {
+            bindings = <
+                &none &none &none &none &none      &none   &none &none &none &none &none &none
+                &none &to 4 &to 6 &to 9 &to 12     &none   &none &none &none &none &none &none
+                &none &none &none &none &none      &none   &none &none &none &none &none &none
+                                  &none &none      &none          &none &none &none
+            >;
+        }
         cool_layer {
-            // 3
+            // 4
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  '   |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | RET  |
@@ -89,11 +98,11 @@
                 &kp ESC  &kp LALT  &kp Q &kp W &kp E &kp R   &kp T &kp Y  &kp U &kp I     &kp O    &kp P
                 &kp TAB  &kp LCTRL &kp A &kp S &kp D &kp F   &kp G &kp H  &kp J &kp K     &kp L    &kp SEMI
                 &kp RET  &kp LSHFT &kp Z &kp X &kp C &kp V   &kp B &kp N  &kp M &kp COMMA &kp DOT  &kp FSLH
-                                 &kp LGUI &sl 4 &kp SPACE     &kp SPACE &to 0 &kp RALT
+                                 &kp LGUI &sl 5 &kp SPACE     &kp SPACE &to 0 &kp RALT
                 >;
         };
         cool_extra_layer {
-            // 4
+            // 5
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  '   |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | RET  |
@@ -107,7 +116,7 @@
                 >;
         };
         colemak_layer {
-            // 5
+            // 6
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  |  ;  |  '   |
             // | CTRL |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  | RET  |
@@ -121,7 +130,7 @@
                 >;
         };
         bluetooth_layer {
-            // 6
+            // 7
             bindings = <
                 &none &none &none &none &none      &none          &none &none &none &none &none &bt BT_CLR
                 &none &none &none &none &bt BT_PRV &bt BT_SEL 0   &none &none &none &none &none &none
@@ -130,7 +139,7 @@
                 >;
         };
         mouse_layer {
-            // 7
+            // 8
             bindings = <
                 &none &none &none &none     &none     &none             &none     &none          &mmv MOVE_UP   &none           &none &none
                 &none &none &none &mkp LCLK &mkp MCLK &mkp RCLK         &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
@@ -139,16 +148,16 @@
             >;
         };
         artseyio_layer {
-            // 8
+            // 9
             bindings = <
-                &none &none &none &none &none &none      &none &lt 10 A &kp    R &kp T    &lt 9 S &none 
+                &none &none &none &none &none &none      &none &lt 11 A &kp    R &kp T    &lt 10 S &none 
                 &none &none &none &none &none &none      &none &kp E    &kp    Y &kp I    &kp O   &none 
                 &none &none &none &none &none &none      &none &none   &none &none &none    &none 
                                   &none &none &none      &none &to 0 &none
             >;
         };
         artseyio_numbers_layer {
-            // 9
+            // 10
             bindings = <
                 &none &none &none &none &none &none      &none &kp N1 &kp N2 &kp N3 &none &none 
                 &none &none &none &none &none &none      &none &kp N4 &kp N5 &kp N6 &none &none 
@@ -157,7 +166,7 @@
             >;
         };
         artseyio_brackets_layer {
-            // 10
+            // 11
             bindings = <
                 &none &none &none &none &none &none      &none &none &kp LPAR &kp LBKT &kp LBRC &none 
                 &none &none &none &none &none &none      &none &none &kp RPAR &kp RBKT &kp RBRC &none 
@@ -166,16 +175,16 @@
             >;
         };
         chordic_layer {
-            // 11
+            // 12
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  '   |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | RET  |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR |BSPC |   | SPC | RSE  | ALT |
             bindings = <
-                &sl 12  &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U  &kp I      &kp O      &kp P    &kp SQT
+                &sl 13  &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U  &kp I      &kp O      &kp P    &kp SQT
                 &kp TAB &kp A &kp S &kp D &kp F &kp G       &kp H &kp J  &kp K      &kp L      &kp SEMI &kp RET
-                &sl 13  &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M  &kp COMMA  &kp DOT    &kp FSLH &kp ESC
+                &sl 14  &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M  &kp COMMA  &kp DOT    &kp FSLH &kp ESC
                       &sk LALT    &sk LSHFT   &kp BSPC    &kp SPACE &sk LCTRL &sk LGUI
             >;
             // qwert yuiop
@@ -194,7 +203,7 @@
             //    ...    ...    ...    ...    ...    ...
         };
         chordic_numbers_layer {
-            // 12
+            // 13
             // -----------------------------------------------------------------------------------------
             // |  INS |  &  |  ^  |  {  |  }  |  `  |   |  /  |  1  |  2  |  3  |  *  |  \   |
             // | PSCRN|  @  |  #  |  (  |  )  |  !  |   |  0  |  4  |  5  |  6  |  -  |  =   |
@@ -208,7 +217,7 @@
                 >;
         };
         chordic_nav_layer {
-            // 13
+            // 14
             // -----------------------------------------------------------------------------------------
             // |  GAM |  F1 |  F2 |  F3 |  F4 |BTCLR|   | HOME| BUP | BDN | PGUP|     |      |
             // | CAPS |  F5 |  F6 |  F7 |  F8 | BT1 |   | LFT | DWN |  UP | RGT |     |      |
@@ -234,133 +243,133 @@
         combo_under {
             timeout-ms = <50>;
             key-positions = <20 21>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp UNDER>;
         };
         combo_minus {
             timeout-ms = <50>;
             key-positions = <19 20>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp MINUS>;
         };
         combo_plus {
             timeout-ms = <50>;
             key-positions = <19 20 21>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp PLUS>;
         };
         combo_equals {
             timeout-ms = <50>;
             key-positions = <20 21 22>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp EQUAL>;
         };
         combo_bslh {
             timeout-ms = <50>;
             key-positions = <21 8>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp FSLH>;
         };
         combo_pipe {
             timeout-ms = <50>;
             key-positions = <20 8>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp PIPE>;
         };
         combo_caret {
             timeout-ms = <50>;
             key-positions = <19 8 21>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp CARET>;
         };
         combo_tilde {
             timeout-ms = <50>;
             key-positions = <19 10>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp TILDE>;
         };
         combo_backtick {
             timeout-ms = <50>;
             key-positions = <7 20>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp GRAVE>;
         };
         combo_percent {
             timeout-ms = <50>;
             key-positions = <7 34>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp PRCNT>;
         };
         combo_brace {
             timeout-ms = <50>;
             key-positions = <39 7>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp LBRC>;
         };
         combo_cbrace {
             timeout-ms = <50>;
             key-positions = <39 8>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp RBRC>;
         };
         combo_paren {
             timeout-ms = <50>;
             key-positions = <39 19>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp LPAR>;
         };
         combo_cparen {
             timeout-ms = <50>;
             key-positions = <39 20>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp RPAR>;
         };
         combo_bracket {
             timeout-ms = <50>;
             key-positions = <39 31>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp LBKT>;
         };
         combo_cbracket {
             timeout-ms = <50>;
             key-positions = <39 32>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp RBKT>;
         };
         combo_at {
             timeout-ms = <50>;
             key-positions = <14 15>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp AT>;
         };
         combo_amp {
             timeout-ms = <50>;
             key-positions = <13 16>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp AMPS>;
         };
         combo_hash {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp HASH>;
         };
         combo_asterisk {
             timeout-ms = <50>;
             key-positions = <13 14>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp ASTRK>;
         };
         combo_bang {
             timeout-ms = <50>;
             key-positions = <3 16>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp EXCL>;
         };
         combo_dollar {
             timeout-ms = <50>;
             key-positions = <15 4>;
-            layers = <11>;
+            layers = <12>;
             bindings = <&kp DLLR>;
         };
 //                           #  #  #  #
