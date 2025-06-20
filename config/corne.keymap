@@ -81,7 +81,7 @@
         // 3
         layer_select {
             bindings = <
-                &none &none &none &none &none      &none   &none &none &none &none &none &none
+                &to 0 &none &none &none &none      &none   &none &none &none &none &none &none
                 &none &to 4 &to 6 &to 9 &to 12     &none   &none &none &none &none &none &none
                 &none &none &none &none &none      &none   &none &none &none &none &none &none
                                   &none &none      &none          &none &none &none
